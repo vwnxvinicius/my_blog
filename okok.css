@@ -1,0 +1,7 @@
+p {
+    display: none;
+}
+
+h1:hover  p{
+    display: inline-block;
+}
