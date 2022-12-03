@@ -1,1 +1,29 @@
-<p>post</p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'post.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span>LOGO</span>
+            <div class="dropdown-container">
+                <span>Categorias</span>
+                <div class="dropdown">
+                    <a href="https://www.youtube.com/watch?v=RheP0OIxZFE">Youtube</a>
+                    <a href="youtube.com">Google</a>
+                </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>{{ post.title }}</h1>
+        </div>
+        <p>{{ post.post_content }}</p>
+    </main>

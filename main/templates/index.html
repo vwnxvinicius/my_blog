@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span>LOGO</span>
+            <div class="dropdown-container">
+                {% comment %} <span>Categorias</span> {% endcomment %}
+                {% comment %} <div class="dropdown"> {% endcomment %}
+                    {% comment %} {% for c in category %} {% endcomment %}
+                    {% comment %} <a href="{% url 'category_page' c.category_slug %}">{{ c.name}}</a> {% endcomment %}
+                    {% comment %} {% endfor %} {% endcomment %}
+                {% comment %} </div> {% endcomment %}
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="card-container">
+            {% for post in posts %}
+            <div class="card">
+                <img src="{{ post.post_img.url }}" alt="">
+                <h1>Quem é: </h1>
+                <div class="card-content">
+                    <h2>{{post.title}}</h2>
+                    <p>{{ post.post_content }}</p>
+
+                </div>
+                <a href="{% url 'post_page' post.date_added post.post_slug %}">Leia mais >></a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

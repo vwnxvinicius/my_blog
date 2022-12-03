@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
-    Category_slug = models.SlugField(null=True)
+    category_slug = models.SlugField(null=True)
 
 
     def __str__(self):
@@ -22,7 +22,10 @@ class Post(models.Model):
     post_content = models.TextField()
     date_added = models.DateField(auto_now_add=True)
     post_slug = models.SlugField()
-    post_img = models.ImageField(null=True, blank=True)
+    post_img = models.ImageField(null=True, blank=True, upload_to="images/")
+
+
+
 
     def __str__(self):
         return self.title

@@ -1,0 +1,109 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.dropdown-container {
+    margin-right: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-container span {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 2px 2px 2px 2px rgb(226, 226, 226);
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+
+.dropdown-container:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    align-items: center;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    padding: 3em;
+    color: white;
+    gap: 3em;
+    display: flex;
+    width: 90%;
+}
+
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.card p { 
+    line-height: 150%;
+    margin-top: 1em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 400px;
+    background-color: black;
+    padding: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+
+.card-content {
+    color: wheat;
+}
+
+
+.card a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
