@@ -25,5 +25,6 @@
         <div class="container">
             <h1>{{ post.title }}</h1>
         </div>
-        <p>{{ post.post_content }}</p>
+        <p>{{ post.post_content | safe }}</p>
+        <span>{{ post.date_added }}</span>
     </main>
